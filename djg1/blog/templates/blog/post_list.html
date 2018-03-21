@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
- hello
+Hello</br>
+
+{% for post in posts %}
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.text | linebreaksbr }} </p>
+    <p><i>published: {{ post.published_date }}</i></p>
+{% endfor %}
+
+
 </body>
 </html>
